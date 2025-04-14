@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { jost } from "@/assets/fonts";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
    title: "Home",
@@ -17,6 +18,7 @@ export default function RootLayout({
          <body
             className={`antialiased ${jost.className}`}
          >
+            <Header />
             {children}
          </body>
       </html>
