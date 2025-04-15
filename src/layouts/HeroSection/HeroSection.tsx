@@ -42,7 +42,7 @@ export default function HeroSection() {
    const windowSize = useViewPortSize();
 
    return (
-      <section className={`flex flex-col items-center px-6 w-full ${'heroSection'}`}>
+      <section className={`flex flex-col items-center px-6 w-full mb-8 ${'heroSection'}`}>
          <div className={`flex flex-row lg:justify-start justify-center max-w-[1272px] w-full mt-8 ${'logo'}`}>
             <Image 
                src={'/byteex-logo.svg'}
@@ -58,7 +58,7 @@ export default function HeroSection() {
                      Don’t apologize for being comfortable.
                   </h1>
                   {
-                     windowSize.width < 1024 && 
+                     windowSize.width <= 1024 && 
                      <Image 
                         src={'/heroSection/heroSectionMainPhoto.png'}
                         alt="hero section main photo"
