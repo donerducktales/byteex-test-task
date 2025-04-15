@@ -4,39 +4,6 @@ import { inter } from "@/assets/fonts";
 import useViewPortSize from "@/hooks/useViewPortSize";
 import { ArrowLongRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
-import styled from "styled-components";
-
-const StyledListItem = styled.div`
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   gap: 10px;
-
-   .styledListItemIcon {
-      min-width: 31px;
-      height: 31px;
-      background-color: var(--primaryCream);
-      border-radius: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-
-   p {
-      max-width: 425px;
-      font-size: 0.938rem;
-      color: var(--primaryGrey);
-      letter-spacing: 3%;
-      line-height: 23px;
-      font-weight: 400px;
-   }
-
-   @media (max-width: 768px) {
-      p {
-         font-size: 0.813rem;
-      }
-   }
-`;
 
 export default function HeroSection() {
    const windowSize = useViewPortSize();
@@ -67,45 +34,47 @@ export default function HeroSection() {
                      />
                   }
                   <div className={`flex flex-col gap-5 mb-10 ${'benefits'}`}>
-                     <StyledListItem>
-                        <div className="styledListItemIcon">
+                     <div className={`flex flex-row gap-[10px] items-center ${'benefit'}`}>
+                        <div className={`min-w-[31px] h-[31px] bg-primaryCream rounded-[100%] flex justify-center items-center ${'benefitIcon'}`}>
                            <Image 
-                              src={'/heroSection/sun-and-moon.svg'}
+                              src={'/sun-and-moon.svg'}
                               alt="sun and moon icon"
                               width={20.5}
                               height={20.5}
                            />
                         </div>
-                        <p>
+                        <p className={`max-w-[425px] md:text-[0.938rem] text-[0.813rem] text-primaryGrey tracking-[3%] leading-6 font-normal ${'benefitText'}`}>
                            Beautiful, comfortable loungewear for day or night.
                         </p>
-                     </StyledListItem>
-                     <StyledListItem>
-                        <div className="styledListItemIcon">
+                     </div> 
+
+                     <div className={`flex flex-row gap-[10px] items-center ${'benefit'}`}>
+                        <div className={`min-w-[31px] h-[31px] bg-primaryCream rounded-[100%] flex justify-center items-center ${'benefitIcon'}`}>
                            <Image 
-                              src={'/heroSection/leaf-and-shoppingcart.svg'}
-                              alt="sun and moon icon"
+                              src={'/leaf-and-shoppingcart.svg'}
+                              alt="leaf and shopping cart"
                               width={20.5}
                               height={20.5}
                            />
                         </div>
-                        <p>
+                        <p className={`max-w-[425px] md:text-[0.938rem] text-[0.813rem] text-primaryGrey tracking-[3%] leading-6 font-normal ${'benefitText'}`}>
                            No wasteful extras, like tags or plastic packaging.
                         </p>
-                     </StyledListItem>
-                     <StyledListItem>
-                        <div className="styledListItemIcon">
+                     </div> 
+
+                     <div className={`flex flex-row gap-[10px] items-center ${'benefit'}`}>
+                        <div className={`min-w-[31px] h-[31px] bg-primaryCream rounded-[100%] flex justify-center items-center ${'benefitIcon'}`}>
                            <Image 
-                              src={'/heroSection/waves.svg'}
-                              alt="sun and moon icon"
+                              src={'/waves.svg'}
+                              alt="waves"
                               width={14}
                               height={13}
                            />
                         </div>
-                        <p>
+                        <p className={`max-w-[425px] md:text-[0.938rem] text-[0.813rem] text-primaryGrey tracking-[3%] leading-6 font-normal ${'benefitText'}`}>
                            Our signature fabric is incredibly comfortable — unlike anything you’ve ever felt.
                         </p>
-                     </StyledListItem>
+                     </div> 
                   </div>
                   <button className={`max-w-[356px] w-full h-[56px] bg-primaryDarkBlue text-white rounded-sm flex flex-row justify-center items-center ${'heroSectionButton'} ${inter.className}`}>
                      Customize Your Outfit 
