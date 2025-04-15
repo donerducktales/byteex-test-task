@@ -1,16 +1,23 @@
 "use client"
 
+import BenefitSectionCarousel from "@/components/BenefitSectionCarousel";
+import useViewPortSize from "@/hooks/useViewPortSize";
 import Image from "next/image";
 
 export default function BenefitSection() {
+   const windowSize = useViewPortSize();
+   
    return (
       <section className={`max-w-[1324px] w-full flex flex-col items-center px-5 mt-28 mb-14 ${'benefitSection'}`}>
-         <div className={`flex flex-row justify-between ${'benefitSectionWrapper'}`}>
-            <div className={`flex flex-col items-start ml-9 ${'benefitSectionCol'}`}>
-               <h1 className={`text-[2rem] text-primaryDarkBlue tracking-[4%] mb-20 ${'benefitHeader'}`}>
+         <div className={`flex flex-row justify-between w-full gap-12 ${'benefitSectionWrapper'}`}>
+            <div className={`flex flex-col lg:items-start items-center lg:ml-9 z-10 w-full ${'benefitSectionCol'}`}>
+               <h1 className={`text-[2rem] text-primaryDarkBlue tracking-[4%] lg:mb-20 max-lg:text-center mb-6 ${'benefitHeader'}`}>
                   Loungewear you can be proud of.
                </h1>
-               <div className={`flex flex-col gap-8 items-start ${'benefitSectionBenefitsList'}`}>
+               {
+                  windowSize.width <= 1024 && <BenefitSectionCarousel />
+               }
+               <div className={`flex flex-col gap-8 items-start max-lg:mt-16 ${'benefitSectionBenefitsList'}`}>
                   <div className={`flex flex-row items-start gap-8 ${'benefit'}`}>
                      <div className={`min-w-[42px] h-[42px] bg-primaryCream rounded-[100%] flex justify-center items-center ${'styledBenefitIcon'}`}>
                         <Image 
@@ -88,6 +95,9 @@ export default function BenefitSection() {
                   </div>
                </div>
             </div>
+            {
+               windowSize.width > 1024 && <BenefitSectionCarousel />
+            }
          </div>
       </section>
    )

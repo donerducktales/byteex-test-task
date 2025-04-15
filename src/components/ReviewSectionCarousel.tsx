@@ -53,7 +53,7 @@ export default function ReviewSectionCarousel() {
    
    return (
       <div className={`w-full flex flex-col items-center ${'reviewSectionCarousel'}`}>
-         <h1 className={`text-secondaryGrey text-xl tracking-[3%] ${'reviewSectionCarousel'}`}>
+         <h1 className={`text-secondaryGrey text-xl tracking-[3%] ${'reviewSectionCarouselHeader'}`}>
             as seen in
          </h1>
          <div className={`min-h-[60px] w-full max-w-[1266px] ${'embla'}`}>
@@ -73,7 +73,6 @@ export default function ReviewSectionCarousel() {
                      </div>
                   )}
                </div>
-             
             </div>
          </div>
       </div>
