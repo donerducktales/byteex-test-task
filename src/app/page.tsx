@@ -1,7 +1,9 @@
+import HeroSection from "@/layouts/HeroSection/HeroSection";
+
 export default function Home() {
    return (
-      <div>
-         hello
-      </div>
+      <main className={`flex flex-col items-center ${'main'}`}>
+         <HeroSection />
+      </main>
    );
 }
