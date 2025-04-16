@@ -1,5 +1,6 @@
 import AboutSection from "@/layouts/AboutSection/AboutSection";
 import BenefitSection from "@/layouts/BenefitSection/BenefitSection";
+import CTASection from "@/layouts/CTASection/CTASection";
 import HeroSection from "@/layouts/HeroSection/HeroSection";
 import InfoSection from "@/layouts/InfoSection/InfoSection";
 import OrderSection from "@/layouts/OrderSection/OrderSection";
@@ -17,6 +18,7 @@ export default function Home() {
          <UserSection />
 
          <InfoSection />
+         <CTASection />
       </main>
    );
 }
