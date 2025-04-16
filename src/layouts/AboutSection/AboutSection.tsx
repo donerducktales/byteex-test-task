@@ -1,35 +1,25 @@
-"use client"
-
 import { inter } from "@/assets/fonts"
-import useViewPortSize from "@/hooks/useViewPortSize"
 import { ArrowLongRightIcon } from "@heroicons/react/20/solid"
 import Image from "next/image"
 
 export default function AboutSection() {
-   const windowWidth = useViewPortSize();
-   
    return (
       <section className={`w-full flex flex-col items-center px-5 bg-primaryLightGrey ${'aboutSection'}`}>
          <div className={`w-full max-w-[1324px] flex flex-row justify-between mt-[83px] mb-[56px] gap-12 ${'aboutSectionWrapper'}`}>
-            {
-               windowWidth.width > 1024 &&
-               <div className={`w-full ${'aboutSectionImage'}`}>
-                  <Image
-                     src={'/aboutSection/about-section-main-photo.png'}
-                     alt="about section main photo"
-                     width={524}
-                     height={664}
-                     unoptimized={true}
-                  />
-               </div>
-            }
+            <div className={`w-full max-lg:hidden ${'aboutSectionImage'}`}>
+               <Image
+                  src={'/aboutSection/about-section-main-photo.png'}
+                  alt="about section main photo"
+                  width={524}
+                  height={664}
+                  unoptimized={true}
+               />
+            </div>
             <div className={`flex flex-col lg:items-start items-center w-full ${'aboutSectionCol'}`}>
                <h1 className={`text-[2rem] text-primaryDarkBlue tracking-[4%] mb-8 ${'aboutSectionColHeader'}`}>
                   Be your best self.
                </h1>
-               {
-                  windowWidth.width <= 1024 &&
-                  <div className={`w-full flex justify-center max-lg:mb-12 ${'aboutSectionImage'}`}>
+                  <div className={`w-full flex justify-center max-lg:mb-12 lg:hidden ${'aboutSectionImage'}`}>
                      <Image
                         src={'/aboutSection/about-section-main-photo.png'}
                         alt="about section main photo"
@@ -38,7 +28,6 @@ export default function AboutSection() {
                         unoptimized={true}
                      />
                   </div>
-               }
                <div className={`flex flex-col gap-6 text-[0.938rem] tracking-[3%] leading-6 text-secondaryGrey mb-8 ${'aboutSectionColText'}`}>
                   <p>
                      Hi! My name’s [Insert Name], and I founded [Insert] in ____. 
