@@ -1,6 +1,7 @@
 import AboutSection from "@/layouts/AboutSection/AboutSection";
 import BenefitSection from "@/layouts/BenefitSection/BenefitSection";
 import HeroSection from "@/layouts/HeroSection/HeroSection";
+import InfoSection from "@/layouts/InfoSection/InfoSection";
 import OrderSection from "@/layouts/OrderSection/OrderSection";
 import ReviewSection from "@/layouts/ReviewSection/ReviewSection";
 import UserSection from "@/layouts/UserSection/UserSection";
@@ -14,6 +15,8 @@ export default function Home() {
          <AboutSection />
          <OrderSection />
          <UserSection />
+
+         <InfoSection />
       </main>
    );
 }
