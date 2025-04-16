@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function OrderSection() {
    return (
       <section className={`max-w-[1168px] w-full flex flex-col items-center px-6 mt-[75px] ${'orderSection'}`}>
-         <h1 className={`text-[2rem] tracking-[4%] text-primaryDarkBlue mb-12 ${'orderSectionHeader'}`}>
+         <h1 className={`text-[2rem] tracking-[4%] text-primaryDarkBlue mb-12 text-center ${'orderSectionHeader'}`}>
             Comfort made easy
          </h1>
          <div className={`flex lg:flex-row flex-col gap-10 justify-center items-center mb-[56px] ${'orderSectionCardsWrapper'}`}>

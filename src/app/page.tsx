@@ -3,6 +3,7 @@ import BenefitSection from "@/layouts/BenefitSection/BenefitSection";
 import HeroSection from "@/layouts/HeroSection/HeroSection";
 import OrderSection from "@/layouts/OrderSection/OrderSection";
 import ReviewSection from "@/layouts/ReviewSection/ReviewSection";
+import UserSection from "@/layouts/UserSection/UserSection";
 
 export default function Home() {
    return (
@@ -12,6 +13,7 @@ export default function Home() {
          <BenefitSection />
          <AboutSection />
          <OrderSection />
+         <UserSection />
       </main>
    );
 }
